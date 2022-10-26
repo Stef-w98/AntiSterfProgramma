@@ -102,8 +102,7 @@ public partial class LoginPage : ContentPage
             IsOnline();
         }
         if (online)
-        {
-            
+        {            
             if(EntUserName.Text != null || EntPassword.Text != null)
             {
                 User user = new User();
