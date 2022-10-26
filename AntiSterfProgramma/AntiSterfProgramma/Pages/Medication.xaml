@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AntiSterfProgramma.Medication"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="true"
+             Shell.FlyoutBehavior="Flyout"
+             FlyoutItem.IsVisible="True"
+             Title="Medication">
+    <VerticalStackLayout>
+        <CollectionView x:Name="MedicationCollection">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="20"></RowDefinition>
+                            <RowDefinition Height="10"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>                            
+                            <ColumnDefinition Width="14"></ColumnDefinition>                                                       
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>                        
+                        <Image Grid.RowSpan="2"
+                               Source="{Binding MedicationUrl}"
+                               Aspect="AspectFill"
+                               HeightRequest="34"
+                               WidthRequest="34"/>
+                        <Label Grid.Column="2"                                    
+                               Text="{Binding MedicationName}"
+                               FontSize="20"
+                               FontAttributes="Bold"/>
+                        <Label Grid.Row="1"
+                               Grid.Column="2"
+                               Grid.ColumnSpan="2"
+                               Text="{Binding MedicationUse}"
+                               VerticalOptions="End"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+</ContentPage>

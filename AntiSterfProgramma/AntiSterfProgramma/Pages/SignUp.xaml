@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             x:Class="AntiSterfProgramma.SignUp"
+             NavigationPage.HasNavigationBar="False"
+             Shell.FlyoutBehavior="Disabled"
+             Title="SignUp"
+             BackgroundColor="#121212" >
+             <!--Shell.FlyoutBehavior="Disabled"-->
+    
+
+    <VerticalStackLayout HeightRequest="600" WidthRequest="330">
+        <Frame CornerRadius="12" MinimumHeightRequest="400" BackgroundColor="#252525" BorderColor="#252525">
+            <StackLayout MinimumHeightRequest="400" Spacing="15">
+                <Label TextColor="White" 
+                       Margin="10" HorizontalOptions="Center" 
+                       FontSize="50">Register</Label>
+                
+                <Entry x:Name="EntUserName" 
+                       HorizontalTextAlignment="Center" 
+                       BackgroundColor="#1C1C1C" 
+                       TextColor="White" 
+                       Placeholder="Username">                
+
+                </Entry>
+                <Entry x:Name="EntFirstName" 
+                       HorizontalTextAlignment="Center" 
+                       BackgroundColor="#1C1C1C" 
+                       TextColor="White" 
+                       Placeholder="Firstname">
+
+                </Entry>
+                <Entry x:Name="EntLastName" 
+                       HorizontalTextAlignment="Center" 
+                       BackgroundColor="#1C1C1C" 
+                       TextColor="White" 
+                       Placeholder="Lastname">
+
+                </Entry>
+                <Entry x:Name="EntEmail" 
+                       HorizontalTextAlignment="Center" 
+                       BackgroundColor="#1C1C1C" 
+                       TextColor="White" 
+                       Placeholder="email@example.com">
+
+                </Entry>
+                <Entry x:Name="EntPassword" 
+                       IsPassword="True" 
+                       HorizontalTextAlignment="Center" 
+                       BackgroundColor="#1C1C1C" 
+                       TextColor="White" 
+                       Placeholder="Password">
+                    
+                </Entry>
+                <Button x:Name="BtnRegister"
+                        Text="Register" 
+                        FontSize="18" TextColor="White"                         
+                        Clicked="BtnRegister_Clicked" 
+                        BackgroundColor="#B90034">
+                    
+                </Button>
+               
+                <Button x:Name="BtnLogin"
+                        Clicked="BtnLogin_Clicked"
+                        HorizontalOptions="CenterAndExpand" 
+                        BackgroundColor="#A16675" 
+                        TextColor="White" 
+                        Text="Login" 
+                        WidthRequest="120" 
+                        HeightRequest="38" 
+                        FontSize="12">
+                    
+                </Button>
+                
+
+            </StackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AntiSterfProgramma.ViewModel;assembly=AntiSterfProgramma"
+             xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
+             x:Class="AntiSterfProgramma.Weight"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="true"
+             Shell.FlyoutBehavior="Flyout"
+             FlyoutItem.IsVisible="True"
+             Title="Weight">
+    <ContentPage.BindingContext>
+        <local:WeightViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>                
+                <ColumnDefinition Width="10"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"></RowDefinition>            
+                <RowDefinition Height="200"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+            </Grid.RowDefinitions>
+            <lvc:CartesianChart                
+                Grid.Column="1"
+                Grid.Row="1"
+                XAxes="{Binding XAxes}"
+                YAxes="{Binding YAxes}"
+                Series="{Binding Weight}"
+                TooltipPosition="Top">
+            </lvc:CartesianChart>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>

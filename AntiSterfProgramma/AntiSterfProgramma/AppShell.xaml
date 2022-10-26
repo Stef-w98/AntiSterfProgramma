@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AntiSterfProgramma.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:AntiSterfProgramma"
+    NavigationPage.HasNavigationBar="False"
+    FlyoutBehavior="Flyout"    
+    Shell.FlyoutItemIsVisible="True"
+    Shell.NavBarIsVisible="False"
+    Shell.TabBarIsVisible="False"
+    FlyoutBackgroundColor="#121212"    
+    Shell.BackgroundColor="#252525" >
+
+   
+
+    <ShellContent 
+        Title="Login Page" FlyoutItemIsVisible="False"
+        ContentTemplate="{DataTemplate local:LoginPage}"
+        Route="LoginPage"/>
+    <ShellContent 
+        Title="Sign Up Page" FlyoutItemIsVisible="False"
+        ContentTemplate="{DataTemplate local:SignUp}"
+        Route="SignUp"/>
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        
+        <ShellContent 
+            Title="Dashboard" FlyoutIcon="dashboard.png"
+            ContentTemplate="{DataTemplate local:Dashboard}"
+            Route="Dashboard"/>
+        
+        <ShellContent 
+            Title="Medication" FlyoutIcon="pills.png"
+            ContentTemplate="{DataTemplate local:Medication}"/>
+
+        <ShellContent 
+            Title="Weight" FlyoutIcon="scale.png"
+            ContentTemplate="{DataTemplate local:Weight}"/>
+
+        <ShellContent 
+            Title="O2 Saturation" FlyoutIcon="saturation.png"
+            ContentTemplate="{DataTemplate local:O2Saturation}"/>
+
+        <ShellContent 
+            Title="Settings" FlyoutIcon="settings.png"
+            ContentTemplate="{DataTemplate local:Settings}"/>
+    </FlyoutItem>
+
+    <Shell.FlyoutHeader>
+        <Label HorizontalTextAlignment="Center" FontSize="32" Margin="0,20,0,30">A.S.P</Label>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <StackLayout Padding="20">
+            <Button Text="Sign Out" x:Name="SignOut" Clicked="SignOut_Clicked"></Button>
+        </StackLayout>
+    </Shell.FlyoutFooter>
+       
+</Shell>

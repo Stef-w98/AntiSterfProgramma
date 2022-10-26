@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AntiSterfProgramma.O2Saturation"
+             NavigationPage.HasNavigationBar="False"
+             Shell.NavBarIsVisible="true"
+             Shell.FlyoutBehavior="Flyout"
+             FlyoutItem.IsVisible="True"
+             Title="O2Saturation">
+    <VerticalStackLayout>
+        <Label 
+            Text="O2 Saturation"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+    </VerticalStackLayout>
+</ContentPage>
